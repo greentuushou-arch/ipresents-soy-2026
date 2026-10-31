@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>アイプレゼンツへ応援よろしくお願いします｜ショップ・オブ・ザ・イヤー2026 投票受付中</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ロゴ「ハートの木」と看板（はちみつ色×赤い風呂敷）からとったパステル */
+  --cream:#fffaf3;
+  --blush:#fdebe8;
+  --coral:#ef6f6c;
+  --coral-d:#d9534f;
+  --pink:#f6a9bd;
+  --honey:#efcd4f;
+  --honey-l:#fbf0c4;
+  --leaf:#78b98a;
+  --leaf-l:#e4f2e7;
+  --ink:#3b3331;
+  --ink-2:#7a6e6b;
+  --line:rgba(59,51,49,.12);
+  --sans:"Noto Sans JP",sans-serif;
+  --en:"Quicksand","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--honey);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.9;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:750px;margin:0 auto;background:var(--cream);overflow:hidden;padding-bottom:84px}
+.in{padding:0 24px}
+.en{font-family:var(--en)}
+
+/* ---------- 見出し（小さなハート＋英字＋日本語。吹き出しは使わない） ---------- */
+.ttl{text-align:center;margin-bottom:34px}
+.ttl .en{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;letter-spacing:.24em;color:var(--coral)}
+.ttl .en::before,.ttl .en::after{content:"";width:12px;height:12px;background:var(--heart-coral) center/contain no-repeat}
+.ttl h2{font-weight:900;font-size:27px;line-height:1.6;letter-spacing:.08em;margin-top:8px}
+.ttl .lead{margin-top:12px;font-size:16px;color:var(--ink-2)}
+
+/* ---------- 投票ボタン ---------- */
+.vote{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:520px;min-height:70px;margin:0 auto;padding:0 20px;border-radius:999px;background:var(--coral);color:#fff;font-weight:700;font-size:clamp(15px,4.4vw,19px);letter-spacing:.08em;white-space:nowrap;box-shadow:0 5px 0 var(--coral-d),0 12px 24px rgba(239,111,108,.25);overflow:hidden;transition:transform .15s,box-shadow .15s}
+.vote:active{transform:translateY(3px);box-shadow:0 2px 0 var(--coral-d)}
+.vote .arw{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff;color:var(--coral);font-size:12px;flex:none}
+.vote::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);pointer-events:none}
+.vote.ip-shine-play::after{animation:shine 1.6s ease-in-out}
+@keyframes shine{to{left:130%}}
+.vote-note{text-align:center;font-size:14px;color:var(--ink-2);margin-top:14px;line-height:1.7}
+
+/* ---------- ヘッダー ---------- */
+.site{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;background:#fff;border-bottom:1px solid var(--line)}
+.site a{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.06em}
+.site a img{width:44px;height:44px;object-fit:contain}
+.site a small{display:block;font-size:11px;font-weight:500;color:var(--ink-2);letter-spacing:.04em;line-height:1.2}
+.site span{font-family:var(--en);font-weight:600;font-size:13px;letter-spacing:.1em;color:var(--coral)}
+
+/* ---------- FV ---------- */
+.fv{position:relative;background:linear-gradient(180deg,var(--blush) 0%,var(--cream) 62%);padding:30px 0 0;overflow:hidden}
+.ribbon{position:relative;z-index:2;display:table;margin:0 auto;background:var(--coral);color:#fff;font-family:var(--en);font-weight:600;font-size:clamp(13px,3.7vw,18px);letter-spacing:.14em;padding:8px 30px;clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+.ribbon b{font-weight:700;margin-left:.4em}
+.tree{position:relative;z-index:1;width:min(64vw,330px);margin:18px auto 0}
+.tree img{width:100%}
+.rise{position:absolute;inset:-10% -30% 0;pointer-events:none}
+.rise i{position:absolute;bottom:0;width:var(--s,16px);height:var(--s,16px);background:var(--img) center/contain no-repeat;opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{opacity:0;transform:translate(0,0) rotate(0)}12%{opacity:.95}80%{opacity:.85}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--r))}}
+.fv-title{position:relative;z-index:2;margin-top:14px;text-align:center;white-space:nowrap;font-weight:900;font-size:clamp(46px,13.6vw,98px);line-height:1.15;letter-spacing:.04em;color:var(--coral)}
+/* 期間：開始と締切を2つの札で */
+.dates{position:relative;z-index:2;display:flex;align-items:stretch;justify-content:center;gap:8px;margin:16px 16px 0}
+.dt{flex:1;max-width:220px;background:#fff;border:1.5px solid var(--ink);border-radius:14px;padding:8px 6px;text-align:center;line-height:1.3}
+.dt small{display:block;font-family:var(--en);font-weight:700;font-size:12px;letter-spacing:.2em}
+.dt.s small{color:var(--leaf)}
+.dt.e small{color:var(--coral)}
+.dt b{display:block;font-family:var(--en);font-weight:700;font-size:28px;letter-spacing:.02em;margin-top:2px}
+.dt span{display:block;font-size:13px;font-weight:500;color:var(--ink-2)}
+.dates .to{align-self:center;font-family:var(--en);font-weight:700;font-size:20px;color:var(--ink-2)}
+/* ポイント：チケット型 */
+.ticket{position:relative;z-index:2;margin:22px 22px 0;background:var(--honey-l);border-radius:16px;padding:18px 10px 14px;text-align:center;line-height:1.5;letter-spacing:0;-webkit-mask:radial-gradient(circle 12px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 12px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat}
+.ticket::before{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(59,51,49,.28);border-radius:11px;pointer-events:none}
+.ticket .l1{white-space:nowrap;font-size:clamp(14px,4.2vw,19px);font-weight:700;letter-spacing:.04em;color:var(--coral-d)}
+.ticket .l2{white-space:nowrap;font-size:clamp(14px,4.1vw,18px);font-weight:500;margin-top:4px}
+.ticket .l3{font-weight:900;font-size:clamp(23px,6.7vw,36px);line-height:1.35;margin-top:6px}
+.ticket .l3 .w{display:block;white-space:nowrap}
+.ticket .l3 .p{font-family:var(--en);font-weight:700;font-size:1.45em;line-height:1;color:var(--coral);letter-spacing:.01em}
+.ticket .l3 .p small{font-family:var(--sans);font-size:.6em}
+.ticket .l3 .w b{font-family:var(--en);font-weight:700;font-size:1.15em;color:var(--coral)}
+.ticket .nt{white-space:nowrap;font-size:clamp(11px,3.3vw,14px);color:var(--ink-2);margin-top:10px}
+.fv-body{position:relative;z-index:2;padding:30px 22px 52px}
+.fv-lead{text-align:center;white-space:nowrap;font-weight:700;font-size:clamp(15px,4.2vw,26px);letter-spacing:.02em;line-height:1.5}
+.fv-copy{text-align:center;margin-top:8px;font-weight:900;font-size:clamp(24px,6.8vw,40px);line-height:1.6;letter-spacing:.04em}
+.fv-copy em{font-style:normal;color:var(--coral)}
+.fv-cta{margin-top:26px}
+/* FVの下端は波形 */
+.fv::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:22px;background:radial-gradient(circle at 12px 0,transparent 12px,var(--leaf-l) 12.5px) 0 0/24px 22px repeat-x}
+
+/* ---------- お手紙 ---------- */
+.letter-sec{background:var(--leaf-l);padding:56px 16px 64px}
+.letter{position:relative;background:#fff;border-radius:6px 6px 22px 22px;padding:40px 24px 36px;box-shadow:0 12px 30px rgba(59,51,49,.06)}
+.letter::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px;background:radial-gradient(circle at 10px 12px,#fff 10px,transparent 10.5px) 0 0/20px 12px repeat-x}
+.letter .open{font-size:15px;font-weight:700;color:var(--leaf);letter-spacing:.06em;text-align:center}
+.letter .open b{display:block;white-space:nowrap;font-weight:900;font-size:clamp(16px,4.8vw,24px);letter-spacing:.02em;color:var(--ink);line-height:1.6;margin-top:4px}
+.letter .body{margin-top:26px;border-top:1px dashed var(--line);padding-top:24px}
+.letter p{font-size:17px;font-weight:500;line-height:2.05}
+.letter p+p{margin-top:1.1em}
+.letter .to{font-size:18px;font-weight:700;color:var(--coral)}
+.letter mark{background:linear-gradient(transparent 62%,var(--honey-l) 62%);color:inherit}
+.letter .theme{margin:1.4em 0;text-align:center;font-weight:900;font-size:21px;line-height:1.7;color:var(--coral)}
+.letter .theme::before,.letter .theme::after{content:"";display:block;width:60px;height:12px;margin:8px auto;background:var(--hearts-row) center/contain no-repeat}
+.letter .sign{margin-top:1.6em;text-align:right}
+.letter .sign small{display:block;font-size:15px;color:var(--ink-2)}
+
+/* ---------- ありがとう（数字） ---------- */
+.thanks{padding:62px 0 58px;text-align:center}
+.thanks .msg{font-weight:900;font-size:22px;line-height:1.75;letter-spacing:.06em}
+.badges{display:flex;justify-content:center;gap:16px;margin-top:30px}
+.badge{display:grid;place-items:center;align-content:center;width:150px;height:150px;border-radius:50%;background:#fff;border:2px dashed var(--pink);line-height:1.3}
+.badge b{font-family:var(--en);font-weight:700;font-size:40px;color:var(--coral);line-height:1}
+.badge b small{font-family:var(--sans);font-size:.4em;font-weight:700;margin-left:2px;color:var(--ink)}
+.badge span{font-size:14px;font-weight:700;margin-top:8px}
+.badge .st{color:var(--honey);font-size:15px;letter-spacing:.06em;margin-top:0;margin-bottom:4px}
+.thanks .nt{margin-top:16px;font-size:13px;color:var(--ink-2)}
+
+/* ---------- うれしいサービス ---------- */
+.service{background:var(--blush);padding:62px 0 58px}
+.sv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sv{background:#fff;border-radius:18px;padding:18px 12px 16px;text-align:center}
+.sv svg{width:46px;height:46px;margin:0 auto;fill:none;stroke:var(--coral);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{margin-top:10px;font-size:16px;font-weight:900;line-height:1.5}
+.sv p{margin-top:4px;font-size:13px;color:var(--ink-2);line-height:1.6}
+
+/* ---------- 声（ふせん） ---------- */
+.voice{padding:62px 0 58px}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{position:relative;min-height:128px;padding:22px 14px 16px;font-weight:500;font-size:16px;line-height:1.7;border-radius:4px;box-shadow:0 6px 14px rgba(59,51,49,.06)}
+.note::before{content:"";position:absolute;top:-6px;left:50%;width:46px;height:14px;margin-left:-23px;background:rgba(255,255,255,.7);border-radius:2px}
+.note:nth-child(1){background:#fde3e8}
+.note:nth-child(2){background:var(--honey-l)}
+.note:nth-child(3){background:var(--leaf-l)}
+.note:nth-child(4){background:#fdeee0}
+.voice .after{text-align:center;margin-top:30px;font-size:16px;line-height:2}
+
+/* ---------- 投票方法（たてのタイムライン） ---------- */
+.how{background:var(--leaf-l);padding:62px 0 56px}
+.flow{position:relative;display:grid;gap:18px;padding-left:4px}
+.flow::before{content:"";position:absolute;left:30px;top:24px;bottom:24px;width:2px;background:repeating-linear-gradient(var(--leaf) 0 6px,transparent 6px 12px)}
+.flow li{position:relative;list-style:none;display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start}
+.flow .n{position:relative;z-index:1;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#fff;border:2px solid var(--leaf);font-family:var(--en);font-weight:700;font-size:22px;color:var(--leaf)}
+.flow .tx{background:#fff;border-radius:16px;padding:14px 16px}
+.flow h3{font-size:17px;font-weight:900;line-height:1.5}
+.flow p{font-size:15px;color:var(--ink-2);line-height:1.7;margin-top:2px}
+
+/* ---------- 締め ---------- */
+.last{background:var(--coral);color:#fff;padding:60px 24px 58px;text-align:center}
+.last .circle{width:120px;height:120px;margin:0 auto;border-radius:50%;background:#fff;padding:14px}
+.last .circle img{width:100%;height:100%;object-fit:contain}
+.last h2{font-weight:900;font-size:26px;line-height:1.6;letter-spacing:.06em;margin:20px 0 28px}
+.last .vote{background:#fff;color:var(--coral);box-shadow:0 5px 0 rgba(0,0,0,.15)}
+.last .vote .arw{background:var(--coral);color:#fff}
+.last .vote-note{color:rgba(255,255,255,.9)}
+
+/* ---------- 商品 ---------- */
+.items{background:#fff;padding:62px 0 58px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 14px}
+.it .ph{display:block;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:var(--cream)}
+.it .ph img{width:100%;height:100%;object-fit:contain}
+.it .tg{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:#fff;background:var(--leaf);border-radius:999px;padding:0 10px;line-height:1.8}
+.it h4{font-size:15px;font-weight:700;line-height:1.55;margin-top:6px}
+.it .price{font-family:var(--en);font-weight:700;font-size:19px;color:var(--coral);margin-top:2px}
+.it .price small{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink-2)}
+.links{margin-top:44px}
+.btn{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px;padding:0 26px;border:1.5px solid var(--coral);border-radius:999px;color:var(--coral);font-weight:700;font-size:16px;letter-spacing:.06em;transition:background .25s,color .25s}
+.btn::after{content:"→";font-family:var(--en)}
+.btn:hover{background:var(--coral);color:#fff}
+
+/* ---------- 追従ボタン ---------- */
+.fixed{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,250,243,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s}
+.fixed.on{transform:none}
+.fixed .vote{min-height:56px}
+
+@media (min-width:768px){
+  .in{padding:0 56px}
+  .site{padding:12px 32px}
+  .fv{padding-top:40px}
+  .dt b{font-size:34px}
+  .ticket{margin:26px 56px 0}
+  .fv-body{padding:34px 56px 64px}
+  .ttl h2{font-size:31px}
+  .letter-sec{padding:64px 56px 72px}
+  .letter{padding:50px 52px 46px}
+  .letter p{font-size:18px}
+  .badge{width:190px;height:190px}
+  .badge b{font-size:52px}
+  .sv-grid{grid-template-columns:repeat(3,1fr)}
+  .notes{grid-template-columns:repeat(4,1fr)}
+  .flow{grid-template-columns:repeat(3,1fr);gap:16px;padding-left:0}
+  .flow::before{left:16%;right:16%;top:27px;bottom:auto;width:auto;height:2px;background:repeating-linear-gradient(90deg,var(--leaf) 0 6px,transparent 6px 12px)}
+  .flow li{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .flow .tx{width:100%}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .fixed{display:none}
+  .wrap{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .vote.ip-shine-play::after,.rise i{animation:none}
+  .rise{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <a href="https://www.rakuten.co.jp/i-pre/" target="_blank" rel="noopener"><img src="images/logo.png" alt="" width="960" height="960"><span>アイプレゼンツ<small>楽天市場店</small></span></a>
+    <span>SOY 2026</span>
+  </header>
+
+  <!-- ===== FV ===== -->
+  <section class="fv" id="fv">
+    <p class="ribbon">RAKUTEN SHOP OF THE YEAR<b>2026</b></p>
+    <div class="tree">
+      <div class="rise" data-rise="16" aria-hidden="true"></div>
+      <img src="images/logo.png" alt="アイプレゼンツ" width="960" height="960">
+    </div>
+    <h1 class="fv-title">投票受付中</h1>
+    <div class="dates">
+      <p class="dt s"><small>START</small><b>11.1</b><span>(日)</span></p>
+      <span class="to" aria-hidden="true">→</span>
+      <p class="dt e"><small>END</small><b>11.30</b><span>(月)09:59まで</span></p>
+    </div>
+    <div class="ticket">
+      <p class="l1">あなたの1票でベストショップが決まる！</p>
+      <p class="l2">お気に入りのショップに投票すると</p>
+      <p class="l3"><span class="w">最大<span class="p">10,000<small>ポイント</small></span>！</span><span class="w">合計<b>10</b>万名様に当たる！</span></p>
+      <p class="nt">※詳細は楽天市場の投票ページをご確認ください</p>
+    </div>
+    <div class="fv-body">
+      <p class="fv-lead">いつもご利用いただきありがとうございます</p>
+      <p class="fv-copy"><em>アイプレゼンツ</em>に<br>あなたの一票を</p>
+      <div class="fv-cta">
+        <a class="vote" data-vote href="#">アイプレゼンツに投票する<span class="arw">▶</span></a>
+        <p class="vote-note">楽天市場の投票ページが開きます</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== お手紙 ===== -->
+  <section class="letter-sec">
+    <div class="letter">
+      <p class="open">FROM STAFF<b>楽天市場<br>ショップ・オブ・ザ・イヤー2026<br>の投票が始まりました</b></p>
+      <div class="body">
+        <p class="to">お客様へ</p>
+        <p>いつもアイプレゼンツをご利用いただき、誠にありがとうございます。11月1日より、楽天市場「ショップ・オブ・ザ・イヤー2026」の投票が始まりました。</p>
+        <p>アイプレゼンツは、出産内祝いを中心に、結婚や快気、日々のお礼まで、さまざまなギフトをお届けしてまいりました。写真入りのメッセージカードやのし、ラッピングなど、贈る方の<mark>「ありがとう」がきちんと伝わる</mark>よう、ひとつひとつ心を込めてご用意しています。</p>
+        <p class="theme">想いをつなぐギフトを</p>
+        <p>「こんなギフトがあったらうれしい」「こんなサービスがほしい」など、ぜひ皆さまの声をお聞かせください。いただいたメッセージは、スタッフ一同の大きな励みになります。</p>
+        <p>アイプレゼンツに、あなたの一票をお寄せいただけますと幸いです。</p>
+        <p class="sign"><small>2026年11月</small>アイプレゼンツ スタッフ一同</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ありがとう ===== -->
+  <section class="thanks">
+    <div class="in">
+      <div class="ttl"><span class="en">THANK YOU</span></div>
+      <p class="msg">たくさんの「ありがとう」に<br>支えられています</p>
+      <div class="badges">
+        <p class="badge"><span class="st">★★★★★</span><b>4.78</b><span>ショップ評価</span></p>
+        <p class="badge"><b>5,858<small>件</small></b><span>いただいたレビュー</span></p>
+      </div>
+      <p class="nt">※ショップ評価・レビュー件数は2026年10月30日時点</p>
+    </div>
+  </section>
+
+  <!-- ===== うれしいサービス ===== -->
+  <section class="service">
+    <div class="in">
+      <div class="ttl">
+        <span class="en">SERVICE</span>
+        <h2>ギフト専門店の<br>うれしいサービス</h2>
+        <p class="lead">お祝い・お返しにも安心</p>
+      </div>
+      <div class="sv-grid">
+        <div class="sv"><svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="2"/><path d="M12 16h24M20 6v10M28 6v10M18 24h12M18 30h12"/></svg><h3>のし・名入れ</h3><p>様々な用途に対応</p></div>
+        <div class="sv"><svg viewBox="0 0 48 48"><rect x="6" y="11" width="36" height="26" rx="3"/><circle cx="17" cy="22" r="5"/><path d="M8 35l10-8 6 5 7-6 9 8M28 19h9M28 24h7"/></svg><h3>メッセージカード</h3><p>オリジナル・定型・写真入り</p></div>
+        <div class="sv"><svg viewBox="0 0 48 48"><path d="M10 16h28l-2 26H12z"/><path d="M18 16v-3a6 6 0 0 1 12 0v3"/></svg><h3>ラッピング・<br>手提げ袋</h3><p>贈る場面に合わせて</p></div>
+        <div class="sv"><svg viewBox="0 0 48 48"><path d="M4 14h24v20H4zM28 20h9l7 7v7H28z"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/></svg><h3>3,890円以上<br>送料無料</h3><p>税込・沖縄・離島・<br>一部地域除く</p></div>
+        <div class="sv"><svg viewBox="0 0 48 48"><path d="M14 6h16l6 6v30H14z"/><path d="M20 18h10M20 24h10M20 30h6M8 42L42 8"/></svg><h3>明細は<br>同封しません</h3><p>金額のわかるものは入れません</p></div>
+        <div class="sv"><svg viewBox="0 0 48 48"><path d="M16 12h16v14H16zM16 19h16"/><path d="M6 28c4 0 8 2 12 6h8M42 28c-4 0-8 2-12 6"/><path d="M10 34l6 8h16l6-8"/></svg><h3>配送中<br>トラブル保証</h3><p>破損・紛失のとき</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== お声 ===== -->
+  <section class="voice">
+    <div class="in">
+      <div class="ttl">
+        <span class="en">YOUR VOICE</span>
+        <h2>皆さまのお声を<br>お聞かせください</h2>
+        <p class="lead">投票ページの応援メッセージ欄に<br>ひとことお寄せいただけるとうれしいです</p>
+      </div>
+      <div class="notes">
+        <p class="note">写真入りカードがとても喜ばれました</p>
+        <p class="note">ラッピングがかわいくて安心して贈れた</p>
+        <p class="note">内祝い選びで迷ったときに助かりました</p>
+        <p class="note">これからも応援しています</p>
+      </div>
+      <p class="after">いただいたご意見や温かいメッセージは<br>スタッフ一同の大きな励みになります</p>
+    </div>
+  </section>
+
+  <!-- ===== 投票方法 ===== -->
+  <section class="how">
+    <div class="in">
+      <div class="ttl">
+        <span class="en">HOW TO VOTE</span>
+        <h2>投票はかんたん<br>3ステップ</h2>
+      </div>
+      <ol class="flow">
+        <li><span class="n">1</span><div class="tx"><h3>投票ボタンをタップ</h3><p>このページの投票ボタンから、楽天市場の投票ページへ</p></div></li>
+        <li><span class="n">2</span><div class="tx"><h3>楽天会員でログイン</h3><p>お持ちの楽天会員IDでログインしてください</p></div></li>
+        <li><span class="n">3</span><div class="tx"><h3>投票＆応援メッセージ</h3><p>アイプレゼンツに一票と、ひとことメッセージを</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== 締め ===== -->
+  <section class="last" id="last">
+    <div class="circle"><img src="images/logo.png" alt="" loading="lazy"></div>
+    <h2>アイプレゼンツに<br>あなたの一票を</h2>
+    <a class="vote" data-vote href="#">アイプレゼンツに投票する<span class="arw">▶</span></a>
+    <p class="vote-note">投票は11月30日（月）09:59まで<br>投票すると最大10,000ポイント！<br>合計10万名様に当たる！</p>
+  </section>
+
+  <!-- ===== 商品 ===== -->
+  <section class="items">
+    <div class="in">
+      <div class="ttl">
+        <span class="en">POPULAR GIFT</span>
+        <h2>アイプレゼンツの<br>人気のギフト</h2>
+        <p class="lead">写真入りメッセージカードも<br>一緒に贈れます</p>
+      </div>
+      <div class="grid">
+        <a class="it" href="https://item.rakuten.co.jp/i-pre/sk-820103/" target="_blank" rel="noopener"><span class="ph"><img src="images/sk-820103.jpg" alt="銀座千疋屋 フルーツジュース" loading="lazy"></span><span class="tg">ドリンク</span><h4>銀座千疋屋 フルーツジュース 5本</h4><p class="price">4,200<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/i-pre/98026-04/" target="_blank" rel="noopener"><span class="ph"><img src="images/98026-04.jpg" alt="銀座千疋屋 フルーツバウム" loading="lazy"></span><span class="tg">スイーツ</span><h4>銀座千疋屋 フルーツバウム</h4><p class="price">4,500<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/i-pre/sk-820130/" target="_blank" rel="noopener"><span class="ph"><img src="images/sk-820130.jpg" alt="銀座千疋屋 フルーツクッキー" loading="lazy"></span><span class="tg">スイーツ</span><h4>銀座千疋屋 フルーツクッキー 焼菓子</h4><p class="price">4,480<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/i-pre/db-stb-23-0553-053-f/" target="_blank" rel="noopener"><span class="ph"><img src="images/db-stb-23-0553-053-f.jpg" alt="スターバックス ドリップコーヒーとクッキーのセット" loading="lazy"></span><span class="tg">セット</span><h4>スターバックス コーヒー＆クッキー 風呂敷包セット</h4><p class="price">5,600<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/i-pre/11-8229-860b301/" target="_blank" rel="noopener"><span class="ph"><img src="images/11-8229-860b301.jpg" alt="カタログギフト 5000円コース" loading="lazy"></span><span class="tg">カタログギフト</span><h4>カタログギフト 5,000円コース</h4><p class="price">5,000<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/i-pre/17-8007-928/" target="_blank" rel="noopener"><span class="ph"><img src="images/17-8007-928.jpg" alt="グルメカタログギフト 1万円コース" loading="lazy"></span><span class="tg">カタログギフト</span><h4>グルメカタログギフト 1万円コース</h4><p class="price">10,000<small>円</small></p></a>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://www.rakuten.co.jp/i-pre/" target="_blank" rel="noopener">アイプレゼンツ トップへ</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- スマホ追従ボタン -->
+<div class="fixed" id="fixed"><a class="vote" data-vote href="#">アイプレゼンツに投票する<span class="arw">▶</span></a></div>
+
+<script>
+(function(){
+  // ▼投票ページURL（ここだけ変えれば全ボタンに反映。s= は楽天のショップID 256914）
+  var VOTE_URL = 'https://award.rakuten.co.jp/?menu=shop&aid=101&l-id=SOY_fromshop&s=256914';
+  document.querySelectorAll('[data-vote]').forEach(function(a){
+    a.href = VOTE_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  // 見出し・お手紙で使うハートの絵（CSS変数に渡す）
+  function svg(body){ return 'url("data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' + body + '</svg>') + '")'; }
+  var HEART = '<path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.6 1.3 5.3 3.2 1.7-1.9 3.1-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z" fill="';
+  var LEAF = '<path d="M4 20C4 9 11 4 21 4c0 10-6 17-17 16z" fill="';
+  var root = document.documentElement.style;
+  root.setProperty('--heart-coral', svg(HEART + '#ef6f6c"/>'));
+  root.setProperty('--hearts-row', 'url("data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 12"><g transform="translate(6 0) scale(.5)">' + HEART + '#f6a9bd"/></g><g transform="translate(24 0) scale(.5)">' + HEART + '#ef6f6c"/></g><g transform="translate(42 0) scale(.5)">' + HEART + '#efcd4f"/></g></svg>') + '")');
+
+  // ハートの木から、ハートと葉っぱがふわふわ立ちのぼる
+  var RISE = [svg(HEART + '#f6a9bd"/>'), svg(HEART + '#ef6f6c"/>'), svg(HEART + '#efcd4f"/>'), svg(LEAF + '#78b98a"/>')];
+  document.querySelectorAll('[data-rise]').forEach(function(box){
+    for (var i = 0; i < +box.dataset.rise; i++) {
+      var h = document.createElement('i');
+      h.style.cssText = '--img:' + RISE[i % RISE.length] + ';--s:' + (12 + Math.random() * 14) + 'px;left:' + (8 + Math.random() * 84) + '%;--dx:' + (Math.random() * 60 - 30) + 'px;--dy:' + (-180 - Math.random() * 140) + 'px;--r:' + (Math.random() * 60 - 30) + 'deg' +
+        ';animation-duration:' + (5 + Math.random() * 4) + 's;animation-delay:' + (-Math.random() * 9) + 's';
+      box.appendChild(h);
+    }
+  });
+
+  // 投票ボタンのシャイン（ランダム間隔）
+  function shine(){
+    document.querySelectorAll('.vote').forEach(function(b){
+      b.classList.remove('ip-shine-play');
+      void b.offsetWidth;
+      b.classList.add('ip-shine-play');
+    });
+    setTimeout(shine, 2800 + Math.random() * 3400);
+  }
+  setTimeout(shine, 1200);
+
+  // FVを過ぎたら追従ボタン表示
+  // 締めの投票ボタンが見えている間は隠す
+  var fixed = document.getElementById('fixed'), shown = {};
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ shown[e.target.id] = e.isIntersecting; });
+    fixed.classList.toggle('on', !shown.fv && !shown.last);
+  });
+  io.observe(document.getElementById('fv'));
+  io.observe(document.getElementById('last'));
+})();
+</script>
+</body>
+</html>
