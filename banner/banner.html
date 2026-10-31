@@ -68,10 +68,13 @@ body{font-family:"Zen Maru Gothic",sans-serif;color:var(--ink);-webkit-print-col
 (function(){
   var sp = location.search.indexOf('sp') > -1, bn = document.getElementById('bn');
   var W = sp ? 750 : 1200, H = sp ? 500 : 400;
+  // ?w=1600 のように幅を指定すると、縦横比を保ったまま拡大する
+  var mw = location.search.match(/w=(\d+)/), Z = mw ? +mw[1] / W : 1;
   bn.classList.add(sp ? 'sp' : 'pc');
+  bn.style.zoom = Z;
   // 印刷（PDF）のページサイズをバナーの大きさに合わせる
   var st = document.createElement('style');
-  st.textContent = '@page{size:' + W + 'px ' + H + 'px;margin:0}';
+  st.textContent = '@page{size:' + Math.ceil(W * Z) + 'px ' + Math.ceil(H * Z) + 'px;margin:0}';
   document.head.appendChild(st);
   if (sp) {
     // スマホ用はロゴを見出しの横に並べる
